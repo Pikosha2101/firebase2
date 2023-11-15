@@ -24,22 +24,6 @@ class MainActivity : AppCompatActivity() {
         val db = Firebase.firestore
 
 
-        val user1 = hashMapOf(
-            "group" to "C022",
-            "id" to "5",
-            "name" to "grisha",
-            "surename" to "bar"
-        )
-        db.collection("Student")
-            .add(user1)
-            .addOnSuccessListener { documentReference ->
-                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
-            }
-            .addOnFailureListener { e ->
-                Log.w(TAG, "Error adding document", e)
-            }
-
-
 
         regBut.setOnClickListener {
             val user = hashMapOf(
